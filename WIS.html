@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WIS Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#Animals">BAND</a></li>
+                <li><a href="#Tour">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <font face="Comic Sans MS" font size="7" font color="ff9933" id="title">THE BIG FIVE!</font>
+    <p> </p>
+    <p><em>We all love animals.</em></p>
+    <p>We have created a website introducing the Top Big Five African animals. Check it out!.</p>
+    <p>In Africa, the Big Five game animals are the lion, leopard, rhinoceros, elephant, and Cape buffalo.<br>The term was coined by big-game hunters, and refers to the five most difficult animals in Africa to hunt on foot, but is now also widely used by safari tour operators.
+        The 1990 and later releases of South African rand banknotes feature a different big-five animal on each denomination.<br>
+        Countries where all can be found include Angola, Botswana, Zambia, Uganda, Namibia, Ethiopia, South Africa, Kenya, Tanzania, Zimbabwe, the Democratic Republic of the Congo, Rwanda and Malawi.</p>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4><strong>Lion</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="lion.png" id="lion" alt="Lion">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Leopard</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="leopard.png" id="leopard" alt="leopard">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Rhinoceros</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="rhinoceros.png" id="rhinoceros" alt="Rhinoceros">
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4><strong>Elephant</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="elephant.png" id="elephant" alt="Elephant">
+            </a>
+        </div>
+        <div class="col-sm-6">
+            <h4><strong>Cape Buffalo</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="cape_buffalo.png" id="cape_buffalo" alt="Cape Buffalo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32660632.612691265!2d5.175269647490463!3d2.1939543532259527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10a06c0a948cf5d5%3A0x108270c99e90f0b3!2z6Z2e5rSy!5e0!3m2!1szh-TW!2sbe!4v1586268973316!5m2!1szh-TW!2sbe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-sm-6">
+            <p>travel agency info</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="text-center">Contact</h3>
+    <p class="text-center"><em>We love animal lover!</em></p>
+    <div class="row test">
+        <div class="col-md-4">
+            <p>Welcome to drop a note.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Leuven, Belgium</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +32 1515151515</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button class="btn pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

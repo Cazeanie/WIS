@@ -1,12 +1,59 @@
-#mapid { height: 550px;
-    padding: 6px;
+*{
+
 }
 
-p{color: orchid;
-    font-size: 14px;
-    font-family: "American Typewriter", serif;
+
+.container {
+    padding: 80px 120px;
 }
 
-h1{color: blue;
-    font-family: "Helvetica", sans-serif;
+
+
+#lion {
+    border: 10px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 80%;
 }
+#lion:hover{
+    background-color: coral;
+}
+#leopard {
+    border: 10px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 80%;
+}
+#leopard:hover{
+    background-color: orange;
+}
+#rhinoceros {
+    border: 10px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 80%;
+}
+#rhinoceros:hover{
+    background-color: gold;
+}
+#elephant {
+    border: 10px;
+    margin-bottom: 40px;
+    width: 55%;
+    height: 55%;
+}
+#elephant:hover{
+    background-color: indianred;
+}
+#cape_buffalo {
+    border: 10px;
+    margin-bottom: 40px;
+    width: 55%;
+    height: 55%;
+}
+#cape_buffalo:hover{
+    background-color: tomato;
+}
+
+
+
