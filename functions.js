@@ -9,11 +9,17 @@ $(document).ready(function () {
             var animals = result.individuals;
             for (var i=0; i<animals.length;i++){
                 var currentAnimal = animals[i];
-                console.log(currentAnimal);
+               // console.log(currentAnimal);
                 var location = currentAnimal.locations;
                 console.log(location);
-                var lat = location.location_lat;
-                console.log(lat);
+                for (var i=0; i<location.length;i++){
+                    //the following two lines log the long and lat in the console
+                    console.log(location[i].location_long);
+                    console.log(location[i].location_lat);
+                    //the following lines add the latitude info to the Lat div and is rendered on the web page
+                    var lat = location[i].location_lat;
+                    $("#Lat").append(lat);
+                }
             }
         },
         error: function (data) {
