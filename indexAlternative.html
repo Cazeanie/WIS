@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WIS Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Links-->
+    <!-- Google font: Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="Fengan_new.css">
+</head>
+
+<!-------------------------------------------------- The progress bar ------------------------------------------------->
+
+<!--------------------------------------------------- Scroll screen --------------------------------------------------->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item"><a class="nav-link" href="#homeDiv">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#animalDiv">ANIMALS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mapDiv">MAP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#functionDiv">TRAVEL</a></li>
+<!--        <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#functionDiv" data-toggle="dropdown">TRAVEL</a>-->
+<!--            <div class="dropdown-menu">-->
+<!--                <a class="dropdown-item" href="#weather">Weather</a>-->
+<!--                <a class="dropdown-item" href="#travelAgencies">AGENCIES</a>-->
+<!--                <a class="dropdown-item" href="#flights">FLIGHTS</a>-->
+<!--            </div>-->
+<!--        </li>-->
+        <li class="nav-item"><a class="nav-link" href="#contactDiv">CONTACT</a></li>
+    </ul>
+<!--    <div class="navbar-left">-->
+<!--        <audio controls>-->
+<!--            <source src="images/Hakuna_Matata.mp3" type="audio/mpeg">-->
+<!--            Your browser does not support the audio element.-->
+<!--        </audio>-->
+    </div>
+</nav>
+<!-------------------------------------------------- The header part -------------------------------------------------->
+<div class="container-fluid text-center" id="homeDiv">
+    <p class="header">Customize your unique <br> African trip with us</p>
+</div>
+<!------------------------------------------- The clickable animals: Fengan ------------------------------------------->
+<div class="container" id="animalDiv">
+    <p><br><h3>Start your customized trip from choosing an animal of your interest!</h3></p>
+    <div id="animalCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#animalCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#animalCarousel" data-slide-to="1"></li>
+            <li data-target="#animalCarousel" data-slide-to="2"></li>
+            <li data-target="#animalCarousel" data-slide-to="3"></li>
+            <li data-target="#animalCarousel" data-slide-to="4"></li>
+            <li data-target="#animalCarousel" data-slide-to="5"></li>
+        </ul>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/lion.jpeg" alt="Lion" width="250" height="250">
+            </div>
+            <div class="carousel-item">
+                <img src="images/elephant.jpeg" alt="Elephant" width="250" height="250">
+            </div>
+            <div class="carousel-item">
+                <img src="images/buffalo.jpg" alt="Cape Buffalo" width="250" height="250">
+            </div>
+            <div class="carousel-item">
+                <img src="images/monkey.jpg" alt="Monkey" width="250" height="250">
+            </div>
+            <div class="carousel-item">
+                <img src="images/crane.jpg" alt="Crane" width="250" height="250">
+            </div>
+            <div class="carousel-item">
+                <img src="images/baboon.jpeg" alt="Baboon" width="250" height="250">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#animalCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#animalCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<!------------------------------------------------------ The map ------------------------------------------------------>
+<div class="container-fluid" id="mapDiv">
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="mapid">
+                <p> My map example with layers.</p>
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+                      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+                      crossorigin=""/>
+                <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                        crossorigin=""></script>
+                <script>
+
+                    var westminster = L.marker([51.496654, -0.137501]).bindPopup('This is Westminster'),
+                        coventgarden = L.marker([51.510866, -0.122738]).bindPopup('This is Covent Garden'),
+                        tubestop = L.marker([51.503814, -0.083599]).bindPopup('This is a tube station'),
+                        sintmichaels = L.marker([50.876262, 4.701049]).bindPopup('This is Sint-Michaels Church'),
+                        townhall = L.marker([50.878947, 4.701198]).bindPopup('This is the Town Hall'),
+                        univlib = L.marker([50.877988, 4.707507]).bindPopup('This is the University Library');
+
+
+                    var londoncities = L.layerGroup([westminster, coventgarden, tubestop]);
+                    var leuvencities = L.layerGroup([sintmichaels, townhall, univlib]);
+
+                    var mymap = L.map('mapid', {
+                        center: [5.898367, 22.713053],
+                        zoom: 3,
+                        layers: [londoncities, leuvencities]
+                    });
+
+                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        maxZoom: 18,
+                        id: 'mapbox/streets-v11',
+                        tileSize: 512,
+                        zoomOffset: -1,
+                        accessToken: 'pk.eyJ1IjoiYWJlYXJseSIsImEiOiJjazg4cHkzanAwMGdkM21wcGJvNTIyODRjIn0.ixGAhBPBItMpZQRP2Nyasg'
+                    }).addTo(mymap);
+                    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+                    var circle = L.circle([51.508, -0.11], {
+                        color: 'red',
+                        id: 'spot',
+                        fillColor: '#f03',
+                        fillOpacity: 0.5,
+                        radius: 500
+                    }).addTo(mymap);
+
+                    var polygon = L.polygon([
+                        [51.509, -0.08],
+                        [51.503, -0.06],
+                        [51.51, -0.047]
+                    ]).addTo(mymap);
+
+                    marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+                    circle.bindPopup("I am a circle.");
+                    polygon.bindPopup("I am a polygon.");
+
+                    var popup = L.popup();
+
+                    function onMapClick(e) {
+                        popup
+                            .setLatLng(e.latlng)
+                            .setContent("You clicked the map at " + e.latlng.toString())
+                            .openOn(mymap);
+                    }
+
+                    mymap.on('click', onMapClick);
+
+                    var overlayMaps = {
+                        "London Cities": londoncities,
+                        "Leuven Places": leuvencities
+                    };
+
+                    L.control.layers(null, overlayMaps).addTo(mymap);
+                    // The null in the above line is because I have only one baselayer here, not
+                    // multiple to chose from, however, using multiple baselayers might be an option for
+                    // the different time periods? I need to explore how to use leaflets with an map with an
+                    // image on top
+                </script>
+            </div>
+        </div>
+<!---------------------------------------------- The animal introduction ---------------------------------------------->
+        <div class="col-sm-4" id="intro">
+            <div id="introCarousel" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#introCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#introCarousel" data-slide-to="1"></li>
+                    <li data-target="#introCarousel" data-slide-to="2"></li>
+                    <li data-target="#introCarousel" data-slide-to="3"></li>
+                    <li data-target="#introCarousel" data-slide-to="4"></li>
+                    <li data-target="#introCarousel" data-slide-to="5"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p>African lions have been admired throughout history for as symbols of courage and strength. These iconic animals have powerful bodies — in the cat family, they’re second in size only to tigers — and roars that can be heard from five miles away. An adult lion’s coat is yellow-gold, and juveniles have some light spots that disappear with age. Only male lions typically boast manes, the impressive fringe of long hair that encircles their heads.<br>
+                            <br>African lions once roamed most of Africa and parts of Asia and Europe. But the species has disappeared from 94 percent of its historic range and can only be found today in parts of sub-Saharan Africa.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>African elephants range throughout the savannas of sub-Saharan Africa and the rainforests of central and West Africa. The continent’s northernmost elephants are found in Sahel area of Mali. The small, nomadic herd of Mali elephants migrates in a circular route through the desert in search of water.<br>
+                            <br>Because elephants eat so much, they’re increasingly coming into contact with humans. An elephant can destroy an entire season of crops in a single night — a huge blow to a farmer, who may want to retaliate. Elephants are so smart that they can learn to get around electric fences quickly!</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>Gray crowned cranes can be found in mixed wetland/grassland habitats in eastern and southern Africa, with the largest remaining populations in Kenya, Uganda, Zambia, and South Africa.<br>
+                            <br>As their name suggests, gray crowned cranes are every bit as majestic. One of 15 species of crane, these long-legged birds have gray bodies, white wings with brown and gold feathers, white cheeks, and bright red gular sacs underneath their chins. Most strikingly, a spray of stiff golden feathers forms a crown around their heads.<br>
+                            <br>Unfortunately, their distinctions have also put gray crowned cranes at risk: Considered status symbols among the wealthy, these birds are being captured and illegally sold in large numbers.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>The monkeys of Africa are Old World monkeys. Most live throughout the tropical and equatorial zones. A few live in the semi-arid and rocky northern reaches of Africa. The distribution of some species spans into southern Africa. Some monkeys live in human settlements, including cities.<br>
+                            <br>Among Africa's nonhuman primate species, some live solely in trees, some primarily in trees, some along river and mangrove banks, and some live on the ground. Most are active in daytime, but some are nocturnal.<br></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>A pest to ranchers, a prize to hunters, and a temperamental tank to anything that bothers it, African buffalo roam by the thousands in sub-Saharan Africa.<br>
+                            <br>Cape buffalo, one of four distinct subspecies of the African buffalo, are the most common. They’re distinguished by coloring, size, and even horn shape. There’s also the forest buffalo, the West Africa savanna buffalo, and the Central Africa savanna buffalo.<br>
+                            <br>When the buffalo aren’t fighting off the occasional lion, they’re eating grass—and lots of it. It forms the bulk of their diet. Like cows, buffalo chew cud to further extract nutrients.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>There are five different species of baboons. All of them live in Africa or Arabia. Baboons are some of the world's largest monkeys, and males of different species average from 33 to 82 pounds. Baboon bodies are 20 to 40 inches long, not including substantial tails of varying lengths.<br>
+                            <br>Baboons generally prefer savanna and other semi-arid habitats, though a few live in tropical forests.<br>
+                            <br>Like other Old World monkeys, baboons do not have prehensile (gripping) tails. But they can and do climb trees to sleep, eat, or look out for trouble. They spend much of their time on the ground.</p>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#introCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#introCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------------- Functions ------------------------------------------------------->
+<!-------------------------------------------------- Nav buttons ------------------------------------------------------>
+<div class="container-fluid" id="functionDiv">
+    <div class="row">
+        <div class="col-sm-4" id="functionList">
+            <button class="btn btn1">Check out the weather at your ideal destination!</button>
+            <button class="btn btn2">Not interested in road trip? No worries. Myriads of package tours are prepared for you!</button>
+            <button class="btn btn3">Ready for the discovery trip? Check out the flight connections here!</button>
+        </div>
+<!--------------------------------------------------- Empty box ------------------------------------------------------->
+        <div class="col-sm-8" id="box">
+
+        </div>
+<!---------------------------------------------------- Weather -------------------------------------------------------->
+        <div class="col-sm-8" id="weather">
+            <div id="openweathermap-widget-1"></div>
+            <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+            <script>
+                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                window.myWidgetParam.push({
+                    id: 1,
+                    cityid: '192950', <!-- Make this a variable -->
+                    appid: '1a58e9c9c326970f7cd468f40a839495',
+                    units: 'metric',
+                    containerid: 'openweathermap-widget-1',
+                });  (function() {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                })();
+            </script>
+        </div>
+<!----------------------------------------------------- Agency -------------------------------------------------------->
+        <div class="col-sm-8" id="travelAgencies">
+            <ul>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Travel Agency</th>
+                        <th>Package Tour</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>company 1</td>
+                        <td>package tour a<br>package tour b</td>
+                    </tr>
+                    <tr>
+                        <td>company 2</td>
+                        <td>package tour c<br>package tour d</td>
+                    </tr>
+                    <tr>
+                        <td>....</td>
+                        <td>....</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </ul>
+        </div>
+<!---------------------------------------------------- Flights -------------------------------------------------------->
+        <div class="col-sm-8" id="flights"><p>Flights infos</p></div>
+    </div>
+</div>
+<!---------------------------------------------------- The contact ---------------------------------------------------->
+<div class="container-fluid" id="contactDiv">
+    <h2>CONTACT US</h2>
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment" placeholder="How can we help?"></textarea>
+        </div>
+    </form>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</div>
+<!------------------------------------------------- JavaScript Links -------------------------------------------------->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Local JS -->
+<script src="Fengan_new.js" type="javascript/text"></script>
+<!-- Scrollspy and carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#weather").hide();
+        $("#travelAgencies").hide();
+        $("#flights").hide();
+        $(".btn1").on("click",function(){
+            $("#travelAgencies").hide();
+            $("#flights").hide();
+            $("#weather").slideToggle();
+        });
+        $(".btn2").on("click",function(){
+            $("#weather").hide();
+            $("#flights").hide();
+            $("#travelAgencies").slideToggle();
+        });
+        $(".btn3").on("click",function(){
+            $("#weather").hide();
+            $("#travelAgencies").hide();
+            $("#flights").slideToggle();
+        });
+
+
+    //     let dict={'Kenya':192950, 'Namibia':3355338, 'Congo':2260494};
+    //     for(let i=0; i<dict.length; i++){
+    //         for(let userInput in dict) {
+    //             let cityid = dict[userInput];
+    //         };
+    //     }
+    //     // Which one below do I need?
+    //     let cityid = dict[userInput];
+    //     let cityid = dict.userInput;
+    //     console.log(``)
+    // });
+
+
+</script>
+</body>
+</html>

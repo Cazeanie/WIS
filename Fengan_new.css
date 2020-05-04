@@ -1,0 +1,181 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    /*position: absolute;*/
+    background: url(images/try-out-background-1.jpg);
+    /*background-repeat: no-repeat;*/
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto;
+    Z-index: 1; /* It doesn't go to the top */
+}
+
+#homeDiv{
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-bottom: 80px;
+}
+
+.header{
+    font-size: 100px;
+    text-align: left;
+}
+
+#animalDiv{
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.carousel-inner img {
+    width: 90%;
+    height: 90%;
+}
+
+
+#mapDiv {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mapid{
+    height: 600px;
+    padding: 6px;
+}
+
+.carousel-inner p{
+    padding: 60px;
+}
+
+#intro{
+    height: 600px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#functionDiv{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+#functionList{
+    height: 500px;
+    text-align: center;
+}
+
+#functionList .btn{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: rgba(255,255,255,.5);
+    border: 2px solid #000;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: lightslategray; /* How come it changes the upper part of the page background? *!*/
+    z-index: -1; /* It will be placed behind */
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.btn1::before, .btn2::before, .btn3::before {
+    transform: scaleX(0);
+}
+
+.btn1:hover::before, .btn2:hover::before, .btn3:hover::before {
+    transform: scaleX(1);
+}
+
+.btn1{
+    background-color: cadetblue;
+}
+
+.btn1{
+    background-color: cornsilk;
+}
+
+.btn1{
+    background-color: burlywood;
+}
+
+/*#section1, #section2, #section3{*/
+/*    padding-top:30px;*/
+/*    padding-bottom:30px;*/
+/*}*/
+
+/*#section1{*/
+/*    background: cadetblue;*/
+/*}*/
+
+/*#section2{*/
+/*    background: cornsilk;*/
+/*}*/
+
+/*#section3{*/
+/*    background: burlywood;*/
+/*}*/
+
+/* CSS natural order: the elements defined first in HTML remain on top. */
+
+#weather{
+    position: absolute;
+    left: 600px;
+    margin-top: 50px;
+}
+
+#travelAgencies{
+    position: absolute; /* Position absolute allows you to put an element wherever */
+    left: 600px;
+    margin-top: 50px;
+    height: 260px;
+    width: 700px;
+    background-color: antiquewhite;
+}
+
+#flights{
+    position: absolute;
+    left: 600px;
+    margin-top: 50px;
+    font-size: 50px;
+    color: crimson;
+}
+
+#box{
+    height: 360px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#contactDiv{
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#contactDiv h2{
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 36px;
+    color: #044463
+}
