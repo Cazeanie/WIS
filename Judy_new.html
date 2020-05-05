@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WIS Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Judy_new.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+
+    <!-- JavaScript Links-->
+<!--<script src=“https://code.jquery.com/jquery-3.4.1.min.js”-->
+<!--        integrity=“sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=”-->
+<!--        crossorigin=“anonymous”></script> // Added by Fengan-->
+<!--<script src=“Fengan_new.js” type=“javascript/text”></script> // Added by Fengan-->
+<!-- Commented out by Alli    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> // Fengan: I added it for scrollspy but idk what it is-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> <!-- Judy's Bootstrap -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> // Fengan's Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+</head>
+
+<body>
+<!------------------------------------------------- The navigation bar ------------------------------------------------>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <audio controls>
+                <source src="images/Hakuna_Matata.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#homeDiv">HOME</a></li>
+                <li><a href="#animalDiv">ANIMALS</a></li>
+                <li><a href="#mapDiv">TOUR</a></li>
+                <li><a href="#contactDiv">CONTACT</a></li>
+                <li><a href="#"> </a></li>
+                <!-- <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                         <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                         <li><a href="#">Merchandise</a></li>
+                         <li><a href="#">Extras</a></li>
+                         <li><a href="#">Media</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>--!>
+             </ul>
+         </div>
+     </div>
+ </nav>
+
+ <!-------------------------------------------------- The header part -------------------------------------------------->
+<div class="container text-center" id="homeDiv">
+    <font font size="7">THE BIG FIVE GAME !</font>
+    <p><br><h3>Start your trip plan from choosing an animal of your interest below!</h3></p>
+</div>
+
+<!----------------------------------------------- The clickable animals ----------------------------------------------->
+<div class="container text-center" id="animalDiv">
+    <div class="row">
+        <div class="col-sm-4">
+            <h4><strong>Lion</strong></h4><br>
+            <a href="#spot">
+                <img src="lion.png" id="lion" alt="Lion" >
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Leopard</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="leopard.png" id="leopard" alt="Leopard">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Rhinoceros</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="rhinoceros.png" id="rhinoceros" alt="Rhinoceros">
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4><strong>Elephant</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="elephant.png" id="elephant" alt="Elephant">
+            </a>
+        </div>
+
+        <div class="col-sm-6">
+            <h4><strong>Cape Buffalo</strong></h4><br>
+            <a href="https://www.google.com">
+                <img src="cape_buffalo.png" id="cape_buffalo" alt="Cape Buffalo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------- The map and the travel infos -------------------------------------------->
+
+<!------------------------------------------------------ The map ------------------------------------------------------>
+<div class="container" id="mapDiv">
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="mapid">
+                <p> My map example with layers.</p>
+
+            </div>
+        </div>
+
+<!------------------------------------------------- The travel infos -------------------------------------------------->
+
+<!------------------------------------- The following is an attempt of scroll bar ------------------------------------->
+<!--        <div class="col-sm-4" id="functions">-->
+<!--            <body data-spy="scroll" data-target=".navbar" data-offset="50">-->
+
+<!--            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">-->
+<!--                <ul class="navbar-nav">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#section1">Check the Weather</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#section2">Choose a Package</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#section3">Book your Flight</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+
+<!--            <div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">-->
+<!--                <h1>Check the Weather</h1>-->
+<!--                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>-->
+<!--            </div>-->
+<!--            <div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">-->
+<!--                <h1>Choose a Package</h1>-->
+<!--                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>-->
+<!--            </div>-->
+<!--            <div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">-->
+<!--                <h1>Book your Flight</h1>-->
+<!--                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>-->
+<!--            </div>-->
+<!--            </body>-->
+<!--        </div>-->
+<!--------------------------------------------------------------------------------------------------------------------->
+
+        <div class="col-sm-4" id="functions">
+            <ul class="list-group" id="functionList">
+                <a href="#" class="list-group-item list-group-item-warning" id="weatherButton">
+                    <h5 class="list-group-item-heading"><strong>Weather forecast</strong></h5>
+                    <p class="list-group-item-text">Check out the weather at your ideal destination!</p></a>
+                <a href="#" class="list-group-item list-group-item-warning" id="travelAgenciesButton">
+                    <h5 class="list-group-item-heading"><strong>Travel agencies</strong></h5>
+                    <p class="list-group-item-text">Not interested in road trip? No worries. Myriads of
+                                                    package tours are prepared for you!</p></a>
+<!--                <a href="#" class="list-group-item list-group-item-warning">-->
+<!--                    <h5 class="list-group-item-heading"><strong>Flight</strong></h5>-->
+<!--                    <p class="list-group-item-text">...</p></a>-->
+<!--                <a href="#" class="list-group-item list-group-item-warning">-->
+<!--                    <h5 class="list-group-item-heading"><strong>Help</strong></h5>-->
+<!--                    <p class="list-group-item-text">...</p></a>-->
+            </ul><br>
+            <div id="openweathermap-widget-18"></div>
+            <script>
+                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                window.myWidgetParam.push({
+                    id: 18,
+                    cityid: '192950',
+                    appid: '1a58e9c9c326970f7cd468f40a839495',
+                    units: 'metric',containerid: 'openweathermap-widget-18',});
+                (function() {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);
+                })();
+            </script><br>
+            <div id="travelAgencies">
+                <ul>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Travel Agency</th>
+                            <th>Package Tour</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>company 1</td>
+                            <td>package tour a<br>package tour b</td>
+                        </tr>
+                        <tr>
+                            <td>company 2</td>
+                            <td>package tour c<br>package tour d</td>
+                        </tr>
+                        <tr>
+                            <td>....</td>
+                            <td>....</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- The following widget should pop up with JS code but idk how ---------------------------->
+
+<!--<div class="jumbotron" id="openweathermap-widget-11">-->
+<!--    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>-->
+<!--    <script>-->
+<!--        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];-->
+<!--        window.myWidgetParam.push({-->
+<!--            id: 11,-->
+<!--            cityid: '2643743',-->
+<!--            appid: '1a58e9c9c326970f7cd468f40a839495',-->
+<!--            units: 'metric',-->
+<!--            containerid: 'openweathermap-widget-11',});-->
+<!--        (function() {-->
+<!--            var script = document.createElement('script');-->
+<!--            script.async = true;-->
+<!--            script.charset = "utf-8";-->
+<!--            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";-->
+<!--            var s = document.getElementsByTagName('script')[0];-->
+<!--            s.parentNode.insertBefore(script, s);-->
+<!--        })();</script>-->
+<!--</div>-->
+
+
+
+<!---------------------------------------------------- The contact ---------------------------------------------------->
+<div class="container" id="contactDiv">
+    <!-- www.123formbuilder.com script begins here -->
+    <script type="text/javascript" defer src="//www.123formbuilder.com/embed/5391083.js" data-role="form" data-default-width="650px"></script>
+    <!-- www.123formbuilder.com script ends here -->
+</div>
+</body>
+<script src="functions.js"></script>
+</html>
