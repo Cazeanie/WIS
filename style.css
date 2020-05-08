@@ -1,59 +1,141 @@
-*{
-
-}
+*{}
 
 
 .container {
-    padding: 80px 120px;
+    border: 1px;
+}
+#navbar{
+    color: orange;
 }
 
-
-
-#lion {
+#lion_button, #elephant_button, #cape_buffalo_button, #flamingo_button, #jackal_button, #baboon_button{
     border: 10px;
     margin-bottom: 40px;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
 }
-#lion:hover{
+
+
+#lion_button:hover{
     background-color: coral;
 }
-#leopard {
-    border: 10px;
-    margin-bottom: 40px;
-    width: 80%;
-    height: 80%;
-}
-#leopard:hover{
+#elephant_button:hover{
     background-color: orange;
 }
-#rhinoceros {
-    border: 10px;
-    margin-bottom: 40px;
-    width: 80%;
-    height: 80%;
-}
-#rhinoceros:hover{
+#cape_buffalo_button:hover{
     background-color: gold;
 }
-#elephant {
-    border: 10px;
-    margin-bottom: 40px;
-    width: 55%;
-    height: 55%;
-}
-#elephant:hover{
+
+#flamingo_button:hover{
     background-color: indianred;
 }
-#cape_buffalo {
-    border: 10px;
-    margin-bottom: 40px;
-    width: 55%;
-    height: 55%;
+#jackal_button:hover{
+    background-color: lightcoral;
 }
-#cape_buffalo:hover{
-    background-color: tomato;
+#baboon_button:hover{
+    background-color: darksalmon;
 }
 
 
+#homeDiv {
+    background-color: gainsboro;
+    color: orange;
+    font-family: Comic Sans MS, sans-serif;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+#animalDiv {
+    background-color: beige;
+    color: orange;
+    font-family: Comic Sans MS, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
 
+#mapDiv {
+    background-color: gainsboro;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+#mapid{
+    height: 550px;
+    padding: 6px;
+}
+
+#functions{
+    padding: 6px;
+}
+
+#functionList{
+    color: orange;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+#travelAgencies{
+    background-color: antiquewhite;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+#contactDiv{
+    background-color: beige;
+    padding-top: 30px;
+}
+
+.elecluster {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.bufcluster {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.lioncluster {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.flamcluster {
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.babcluster {
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.jackcluster {
+    width: 30px;
+    height: 30px;
+    background-color: saddlebrown;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
