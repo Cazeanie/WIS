@@ -1,0 +1,194 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background: url("images/BGroad2.jpg");
+    /*height: 100%;*/
+    /*width: 100%;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto;
+    Z-index: 1; /* Why not 0 again? */
+}
+
+.container {
+    border: 1px;
+}
+
+#navbar{
+    background: rgba(255,255,255,.5);
+}
+
+#lion_button, #elephant_button, #cape_buffalo_button, #flamingo_button, #jackal_button, #baboon_button{
+    border: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 70%;
+}
+
+
+#lion_button:hover{
+    background-color: coral;
+}
+#elephant_button:hover{
+    background-color: orange;
+}
+#cape_buffalo_button:hover{
+    background-color: gold;
+}
+
+#flamingo_button:hover{
+    background-color: indianred;
+}
+#jackal_button:hover{
+    background-color: lightcoral;
+}
+#baboon_button:hover{
+    background-color: darksalmon;
+}
+
+#homeDiv {
+    /*background-color: gainsboro;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    /*background: rgba(255,255,255,.5);*/
+}
+
+#homeDiv h1{
+    font-size: 55px;
+}
+
+#homeDiv p{
+    font-size: 35px;
+}
+
+#animalDiv {
+    /*background-color: beige;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    padding-top: 30px;
+    padding-bottom: 50px;
+    /*background: rgba(255,255,255,.5);*/
+}
+
+#mapDiv {
+    /*background-color: gainsboro;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mapid{
+    height: 550px;
+    padding: 6px;
+}
+
+.elecluster {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.bufcluster {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.lioncluster {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.flamcluster {
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.babcluster {
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.jackcluster {
+    width: 30px;
+    height: 30px;
+    background-color: saddlebrown;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+/* Fengan */
+#intro{
+    height: 550px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.carousel-inner p{
+    padding: 30px;
+}
+
+#box{
+    height: 400px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#cityDropdown1, #cityDropdown2{
+    font-family: sans-serif;
+    height: 100px;
+    width: 400px;
+    background: rgba(255,255,255,.5);
+}
+
+#functionContent{
+    margin-top: 45px;
+}
+
+#e2, #k2, #n2, #sa2, #t2{
+    height: 200px;
+    overflow: auto;
+}
+
+#flightsAPI{
+    height: 400px;
+    margin-top: 50px;
+    padding-top: 30px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#contactDiv{
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#footer p{
+    color: #f1f1f1;
+}
