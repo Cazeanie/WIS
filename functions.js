@@ -194,6 +194,8 @@ function loadElephants() {
         method: 'GET',
         dataType: 'jsonp',
         data: {},
+        username: "WISuser",
+        password: "WISpass1",
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -241,6 +243,8 @@ function loadFlamingos() {
         method: 'GET',
         dataType: 'jsonp',
         data: {},
+        username: "WISuser",
+        password: "WISpass1",
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -288,6 +292,8 @@ function loadBaboons() {
         method: 'GET',
         dataType: 'jsonp',
         data: {},
+        username: "WISuser",
+        password: "WISpass1",
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -337,6 +343,8 @@ function loadJackals() {
         method: 'GET',
         dataType: 'jsonp',
         data: {},
+        username: "WISuser",
+        password: "WISpass1",
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -404,7 +412,7 @@ $("#elephant_button").click(function scrollWin(){
     window.scrollTo(0, 700);
 });
 $("#cape_buffalo_button").click(function scrollWin(){
-    window.scrollTo(0, 700);
+    window.scrollTo(0, 800);
 });
 $("#flamingo_button").click(function scrollWin(){
     window.scrollTo(0, 700);
