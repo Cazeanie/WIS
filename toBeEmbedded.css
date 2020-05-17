@@ -1,0 +1,171 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background: url("images/try-out-background-7.jpeg");
+    /*background: no-repeat;*/
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto;
+    Z-index: 1; /* Why not 0 again? */
+}
+
+.container {
+    border: 1px;
+}
+#navbar{
+    color: orange;
+}
+
+#lion_button, #elephant_button, #cape_buffalo_button, #flamingo_button, #jackal_button, #baboon_button{
+    border: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 70%;
+}
+
+
+#lion_button:hover{
+    background-color: coral;
+}
+#elephant_button:hover{
+    background-color: orange;
+}
+#cape_buffalo_button:hover{
+    background-color: gold;
+}
+
+#flamingo_button:hover{
+    background-color: indianred;
+}
+#jackal_button:hover{
+    background-color: lightcoral;
+}
+#baboon_button:hover{
+    background-color: darksalmon;
+}
+
+
+#homeDiv {
+    /*background-color: gainsboro;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background: rgba(255,255,255,.5);
+}
+
+#animalDiv {
+    /*background-color: beige;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background: rgba(255,255,255,.5);
+}
+
+#mapDiv {
+    /*background-color: gainsboro;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*background: rgba(255,255,255,.5);*/
+}
+
+#mapid{
+    height: 550px;
+    padding: 6px;
+}
+
+#contactDiv{
+    /*background-color: beige;*/
+    padding-top: 30px;
+    background: rgba(255,255,255,.5);
+}
+
+.elecluster {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.bufcluster {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.lioncluster {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.flamcluster {
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.babcluster {
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.jackcluster {
+    width: 30px;
+    height: 30px;
+    background-color: saddlebrown;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+/* Fengan */
+#intro{
+    height: 550px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#box{
+    height: 3100px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#cityDropdown1, #cityDropdown2{
+    font-family: sans-serif;
+    height: 100px;
+    width: 400px;
+    background: rgba(255,255,255,.5);
+}
+
+
+#flightsAPI{
+    height: 300px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
