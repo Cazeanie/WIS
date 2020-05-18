@@ -221,6 +221,13 @@ body{
 h4{
     text-align: center;
 }
+#traveltable{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+h3{
+    padding-left: 3px;
+}
 
 html,body{
     height:100%;
