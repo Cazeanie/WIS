@@ -521,3 +521,8 @@ $(document).ready(function(){
         s.parentNode.insertBefore(script, s);
     })()
 });
+
+$(document).ready(function(){
+    var height = $("intro").height();  //getting windows height
+    jQuery('#intro').css('height',height+'px');   //and setting height of carousel
+});
