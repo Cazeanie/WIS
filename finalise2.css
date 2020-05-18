@@ -168,6 +168,10 @@ body{
     background: rgba(255,255,255,.5);
 }
 
+#boxTitle{
+    margin: 20px;
+}
+
 #functionContent{
     margin-top: 45px;
 }
