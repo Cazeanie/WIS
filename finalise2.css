@@ -173,8 +173,12 @@ body{
 }
 
 #e2, #k2, #n2, #sa2, #t2{
-    height: 200px;
+    width: 100%;
+    height: 150px;
+    position: relative;
     overflow: auto;
+    border: 10px;
+    margin-bottom: 15px;
 }
 
 #flightsAPI{
@@ -212,4 +216,20 @@ body{
 }
 h4{
     text-align: center;
+}
+
+html,body{
+    height:100%;
+}
+.carousel,.item,.active{
+    height:100%;
+    border-bottom: 10px;
+    text-align: justify;
+    overflow: scroll;
+}
+.carousel-inner{
+    height:100%;
+    border-bottom: 10px;
+    text-align: justify;
+    overflow: scroll;
 }
