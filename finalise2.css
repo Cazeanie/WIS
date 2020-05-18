@@ -30,23 +30,23 @@ body{
 
 
 #lion_button:hover{
-    background-color: coral;
-}
-#elephant_button:hover{
     background-color: orange;
 }
+#elephant_button:hover{
+    background-color: gray;
+}
 #cape_buffalo_button:hover{
-    background-color: gold;
+    background-color: cadetblue;
 }
 
 #flamingo_button:hover{
-    background-color: indianred;
+    background-color: hotpink;
 }
 #jackal_button:hover{
     background-color: lightcoral;
 }
 #baboon_button:hover{
-    background-color: darksalmon;
+    background-color: darkred;
 }
 
 #homeDiv {
