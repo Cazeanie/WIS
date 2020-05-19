@@ -1,0 +1,292 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background: url("images/BGroad2.jpg");
+    /*height: 100%;*/
+    /*width: 100%;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto;
+    Z-index: 1; /* Why not 0 again? */
+}
+
+.container {
+    border: 1px;
+}
+
+#navbar{
+    background: rgba(255,255,255,.5);
+}
+
+#lion_button, #elephant_button, #cape_buffalo_button, #flamingo_button, #jackal_button, #baboon_button{
+    border: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 70%;
+}
+
+
+#lion_button:hover{
+    background-color: orange;
+}
+#elephant_button:hover{
+    background-color: gray;
+}
+#cape_buffalo_button:hover{
+    background-color: cadetblue;
+}
+
+#flamingo_button:hover{
+    background-color: hotpink;
+}
+#jackal_button:hover{
+    background-color: lightcoral;
+}
+#baboon_button:hover{
+    background-color: darkred;
+}
+
+#homeDiv {
+    /*background-color: gainsboro;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    /*background: rgba(255,255,255,.5);*/
+}
+
+#homeDiv h1{
+    font-size: 55px;
+}
+
+#homeDiv p{
+    font-size: 35px;
+}
+
+#animalDiv {
+    /*background-color: beige;*/
+    /*color: orange;*/
+    /*font-family: Comic Sans MS, sans-serif;*/
+    padding-top: 30px;
+    padding-bottom: 50px;
+    /*background: rgba(255,255,255,.5);*/
+}
+
+#mapDiv {
+    /*background-color: gainsboro;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mapid{
+    height: 550px;
+    padding: 6px;
+}
+
+.elecluster {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.bufcluster {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.lioncluster {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.flamcluster {
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.babcluster {
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.jackcluster {
+    width: 30px;
+    height: 30px;
+    background-color: saddlebrown;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+/* Functions */
+#intro{
+    height: 550px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    position: relative;
+}
+
+.carousel-inner p{
+    padding: 10px 40px 40px 40px;
+}
+
+#box{
+    height: 400px;
+    width: 1130px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    position: absolute;
+    z-index: -1;
+}
+
+#functionContent{
+    margin-top: 45px;
+}
+
+#cityDropdown1, #cityDropdown2{
+    height: 100px;
+    width: 400px;
+    background: rgba(255,255,255,.5);
+}
+
+#boxTitle{
+    margin: 20px;
+}
+
+#e1, #k1, #n1, #sa1, #t1 {
+    height: 200px;
+    width: 990px;
+}
+
+#e2, #k2, #n2, #sa2, #t2{
+    /*width: 100%;*/
+    /*height: 150px;*/
+    /*position: relative;*/
+    /*overflow: auto;*/
+    /*border: 10px;*/
+    /*margin-bottom: 15px;*/
+    height: 200px;
+    width: 990px;
+    overflow: auto;
+}
+
+.mobileShow{
+    position: absolute;
+    left: 50px;
+    top: 0;
+}
+
+.carousel-indicators{
+    position: relative;
+    top: 540px;
+}
+.carousel-indicators li{
+    background-color: black;
+}
+.carousel-indicators .active{
+    background-color: cadetblue;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    position: absolute;
+    top: 270px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    filter: invert(100%);
+}
+
+#traveltable{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+h3{
+    padding-left: 3px;
+}
+
+h4{
+    text-align: center;
+}
+
+html, body{
+    height:100%;
+}
+.carousel,.item,.active{
+    height:100%;
+    border-bottom: 10px;
+    text-align: justify;
+    overflow: scroll;
+}
+.carousel-inner{
+    height:100%;
+    border-bottom: 10px;
+    text-align: justify;
+    overflow: scroll;
+}
+
+.mobileShow{
+    visibility: hidden;
+    display: none;
+}
+@media only screen
+and (max-device-width: 480px){
+    .mobileShow{
+        visibility:visible;
+        display: inline-block;}
+}
+
+
+.mobileHide{
+    visibility:visible;
+    display: inline-block;
+}
+@media only screen
+and (max-device-width: 480px){
+    .mobileHide{
+        visibility: hidden;
+        display: none;
+    }
+}
+
+#flightsAPI{
+    height: 400px;
+    margin-top: 80px;
+    padding-top: 30px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#contactDiv{
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#footer p{
+    color: #f1f1f1;
+}
+
