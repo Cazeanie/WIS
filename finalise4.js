@@ -155,7 +155,7 @@ function loadBuffalo() {
                 }
             }
             for (var k = 0; k < buffalos.length; k++) {
-                marker = L.marker([buffalos[k][0], buffalos[k][1]], {icon: buficon}).bindPopup('Water Buffalo');
+                marker = L.marker([buffalos[k][0], buffalos[k][1]], {icon: buficon}).bindPopup('Cape Buffalo');
                 buflayerGroup.addLayer(marker);
             }
             $("#cape_buffalo_button").click(function(event) {
@@ -385,7 +385,7 @@ function loadJackals() {
 //this puts all the layer groups together in one control box on the map
 function loadAnimals() {
     var animalLayer = {'Lions': lionlayerGroup,
-        'Water Buffalo': buflayerGroup,
+        'Cape Buffalo': buflayerGroup,
         'Elephants': elelayerGroup,
         'Flamingos': flamlayerGroup,
         'Baboons': bablayerGroup,
@@ -440,10 +440,10 @@ $("#baboon_button").click(function scrollWin(){
 
 // Choose functions
 $(document).ready(function(){
-    $('#box').hide();
+    $('#box2').hide();
     $('.functions').hide();
     $('#cityDropdown1').change(function(){
-        $('#box').show();
+        $('#box2').show();
         $('.functions').hide();
         let country = $(this).val();
         if (country === 'ethiopia'){
@@ -467,7 +467,7 @@ $(document).ready(function(){
                 "<option value='t2'>Travel agencies</option>");
             $('#t1').show();$('#e1').hide();$('#k1').hide();$('#n1').hide();$('#sa1').hide();
         } else if (country === 'start'){
-            $('#box').hide();}
+            $('#box2').hide();}
     });
     $('#cityDropdown2').change(function(){
         $('.functions').hide();
@@ -561,6 +561,32 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    var height = $("intro").height();  //getting windows height
-    jQuery('#intro').css('height',height+'px');   //and setting height of carousel
+    let height = $("intro").height();  //getting windows height
+    jQuery('#intro').css('height', height+'px');   //and setting height of carousel
+
+    // Link intros to animal icons
+    $("#lion_button").click(function(){
+        $("#introCarousel").carousel(0);
+    });
+
+    $("#elephant_button").click(function(){
+        $("#introCarousel").carousel(1);
+    });
+
+    $("#cape_buffalo_button").click(function(){
+        $("#introCarousel").carousel(2);
+    });
+
+    $("#flamingo_button").click(function(){
+        $("#introCarousel").carousel(3);
+    });
+
+    $("#jackal_button").click(function(){
+        $("#introCarousel").carousel(4);
+    });
+
+    $("#baboon_button").click(function(){
+        $("#introCarousel").carousel(5);
+    });
 });
+

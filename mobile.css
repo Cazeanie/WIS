@@ -6,6 +6,16 @@ body,
     flex-direction: column;
 }
 
-#box{
-    height: 600px;
+#box1{
+    height: 148px;
+    width: 366px;
+}
+
+#box2{
+    height: 300px;
+    width: 366px;
+}
+
+.table{
+    width: 250px;
 }
