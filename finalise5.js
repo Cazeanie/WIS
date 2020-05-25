@@ -1,4 +1,3 @@
-// layers all in one group, ele and jackal cluster together. BEST version
 
 // this sets the map and it's opening position/coordinates and zoom level
 var mymap = L.map('mapid', {
@@ -186,14 +185,10 @@ var elelayerGroup = L.featureGroup.subGroup(parentGroup, ({
 
 
 function loadElephants() {
-    $.post("https://www.movebank.org/movebank/service/json-auth?&study_id=605129389&individual_local_identifiers[]=LA1&individual_local_identifiers[]=LA11&individual_local_identifiers[]=LA12&individual_local_identifiers[]=LA13&individual_local_identifiers[]=LA14&individual_local_identifiers[]=LA15&individual_local_identifiers[]=LA2&individual_local_identifiers[]=LA26&individual_local_identifiers[]=LA27&individual_local_identifiers[]=LA3&individual_local_identifiers[]=LA4&individual_local_identifiers[]=LA5&individual_local_identifiers[]=LA6&individual_local_identifiers[]=LA7&individual_local_identifiers[]=LA8&max_events_per_individual=5&sensor_type=gps",
-        {user: 'WISuser',
-            password: 'WISpass1'}
-    );
     $.ajax({
-        url: 'https://www.movebank.org/movebank/service/json-auth?&study_id=605129389&individual_local_identifiers[]=LA1&individual_local_identifiers[]=LA11&individual_local_identifiers[]=LA12&individual_local_identifiers[]=LA13&individual_local_identifiers[]=LA14&individual_local_identifiers[]=LA15&individual_local_identifiers[]=LA2&individual_local_identifiers[]=LA26&individual_local_identifiers[]=LA27&individual_local_identifiers[]=LA3&individual_local_identifiers[]=LA4&individual_local_identifiers[]=LA5&individual_local_identifiers[]=LA6&individual_local_identifiers[]=LA7&individual_local_identifiers[]=LA8&max_events_per_individual=5&sensor_type=gps',
+        url: 'elephants.js',
         method: 'GET',
-        dataType: 'jsonp',
+        dataType: 'json',
         data: {},
         success: function (result) {
             var animals = result.individuals;
@@ -236,16 +231,11 @@ var flamlayerGroup = L.markerClusterGroup({
     }
 }).addTo(mymap);
 function loadFlamingos() {
-    $.post("https://www.movebank.org/movebank/service/json-auth?study_id=446595&individual_local_identifiers[]=90932A&individual_local_identifiers[]=90933A&individual_local_identifiers[]=90934A&individual_local_identifiers[]=90935A&individual_local_identifiers[]=90936A-Kipngetich&individual_local_identifiers[]=90937A-Kasiki&individual_local_identifiers[]=90938A-Nyunja&individual_local_identifiers[]=90939A-Abshiro&individual_local_identifiers[]=90940A-Owino&max_events_per_individual=6&sensor_type=gps",
-        {user: 'WISuser',
-            password: 'WISpass1'}
-    );
     $.ajax({
-        url: 'https://www.movebank.org/movebank/service/json-auth?study_id=446595&individual_local_identifiers[]=90932A&individual_local_identifiers[]=90933A&individual_local_identifiers[]=90934A&individual_local_identifiers[]=90935A&individual_local_identifiers[]=90936A-Kipngetich&individual_local_identifiers[]=90937A-Kasiki&individual_local_identifiers[]=90938A-Nyunja&individual_local_identifiers[]=90939A-Abshiro&individual_local_identifiers[]=90940A-Owino&max_events_per_individual=6&sensor_type=gps',
+        url: 'flamingos.js',
         method: 'GET',
-        dataType: 'jsonp',
-        data: {$user: 'WISuser',
-            $password: 'WISpass1'},
+        dataType: 'json',
+        data: {},
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -287,16 +277,11 @@ var bablayerGroup = L.markerClusterGroup({
     }
 }).addTo(mymap);
 function loadBaboons() {
-    $.post("https://www.movebank.org/movebank/service/json-auth?study_id=177002088&individual_local_identifiers[]=F1&individual_local_identifiers[]=F10&individual_local_identifiers[]=F11&individual_local_identifiers[]=F2&individual_local_identifiers[]=F3&individual_local_identifiers[]=F4&individual_local_identifiers[]=F5&individual_local_identifiers[]=F6&individual_local_identifiers[]=F7&individual_local_identifiers[]=F8&individual_local_identifiers[]=F9&individual_local_identifiers[]=M1&individual_local_identifiers[]=M2&individual_local_identifiers[]=MNA&max_events_per_individual=4&sensor_type=natural-mark",
-        {user: 'WISuser',
-            password: 'WISpass1'}
-    );
     $.ajax({
-        url: 'https://www.movebank.org/movebank/service/json-auth?study_id=177002088&individual_local_identifiers[]=F1&individual_local_identifiers[]=F10&individual_local_identifiers[]=F11&individual_local_identifiers[]=F2&individual_local_identifiers[]=F3&individual_local_identifiers[]=F4&individual_local_identifiers[]=F5&individual_local_identifiers[]=F6&individual_local_identifiers[]=F7&individual_local_identifiers[]=F8&individual_local_identifiers[]=F9&individual_local_identifiers[]=M1&individual_local_identifiers[]=M2&individual_local_identifiers[]=MNA&max_events_per_individual=4&sensor_type=natural-mark',
+        url: 'baboons.js',
         method: 'GET',
-        dataType: 'jsonp',
-        data: {$user: 'WISuser',
-            $password: 'WISpass1'},
+        dataType: 'json',
+        data: {},
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
@@ -341,11 +326,10 @@ var jacklayerGroup = L.featureGroup.subGroup(parentGroup,({
 
 function loadJackals() {
     $.ajax({
-        url: 'https://www.movebank.org/movebank/service/json-auth?study_id=304875150&individual_local_identifiers[]=CM05&individual_local_identifiers[]=CM08&individual_local_identifiers[]=CM09&individual_local_identifiers[]=CM10&individual_local_identifiers[]=CM11&individual_local_identifiers[]=CM15&individual_local_identifiers[]=CM18&individual_local_identifiers[]=CM20&individual_local_identifiers[]=CM23&max_events_per_individual=6&sensor_type=gps',
+        url: 'jackals.js',
         method: 'GET',
-        dataType: 'jsonp',
-        data: {$user: 'WISuser',
-            $password: 'WISpass1'},
+        dataType: 'json',
+        data: {},
         success: function (result) {
             var animals = result.individuals;
             for (var i = 0; i < animals.length; i++) {
