@@ -1,0 +1,304 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body {
+    background: url("images/BGroad2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto;
+    Z-index: 1;
+}
+
+.container{
+    border: 1px;
+}
+
+#homeDiv{
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+#homeDiv h1{
+    font-size: 55px;
+}
+
+#homeDiv p{
+    font-size: 35px;
+}
+
+#animalDiv{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#animalDiv h4{
+    text-align: center;
+}
+
+#lion_button, #elephant_button, #cape_buffalo_button, #flamingo_button, #jackal_button, #baboon_button{
+    border: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 70%;
+}
+#lion_button:hover{
+    background-color: orange;
+}
+#elephant_button:hover{
+    background-color: gray;
+}
+#cape_buffalo_button:hover{
+    background-color: cadetblue;
+}
+#flamingo_button:hover{
+    background-color: hotpink;
+}
+#jackal_button:hover{
+    background-color: lightcoral;
+}
+#baboon_button:hover{
+    background-color: darkred;
+}
+
+#mapDiv{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mapid{
+    height: 550px;
+    padding: 6px;
+}
+
+.elecluster{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    text-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.bufcluster{
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.lioncluster{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.flamcluster{
+    width: 30px;
+    height: 30px;
+    background-color: hotpink;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+}
+
+.babcluster{
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+.jackcluster{
+    width: 30px;
+    height: 30px;
+    background-color: saddlebrown;
+    text-align: center;
+    horiz-align: center;
+    font-size: 24;
+    color: white;
+}
+
+
+#intro{
+    height: 550px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    position: relative;
+}
+
+#introCarousel{
+    background-color: transparent;
+}
+
+.carousel-inner{
+    height:500px;
+    border-bottom: 10px;
+}
+
+.carousel-inner p{
+    padding: 10px 40px 40px 40px;
+}
+
+.carousel-inner h4{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-item{
+    height:100%;
+    border-bottom: 10px;
+    border-top: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.carousel-item::-webkit-scrollbar{
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+
+.carousel-indicators{
+    position: relative;
+    top: 540px;
+}
+
+.carousel-indicators li{
+    background-color: black;
+}
+
+.carousel-indicators .active{
+    background-color: cadetblue;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    position: absolute;
+    top: 270px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    filter: invert(100%);
+}
+
+#functionDiv h3{
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+#box1{
+    height: 180px;
+    width: 1110px;
+    margin-top: 70px;
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    z-index: -1;
+}
+
+#box2{
+    height: 300px;
+    width: 1110px;
+    margin-top: 9px;
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    z-index: -1;
+}
+
+#cityDropdown1, #cityDropdown2{
+    height: 90px;
+    width: 400px;
+    background: rgba(255,255,255,.5);
+}
+
+
+#functionContent{
+    margin-top: 45px;
+}
+
+#e1, #k1, #n1, #sa1, #t1 {
+    height: 200px;
+    width: 990px;
+}
+
+#e2, #k2, #n2, #sa2, #t2{
+    /*width: 100%;*/
+    /*height: 150px;*/
+    /*position: relative;*/
+    /*overflow: auto;*/
+    /*border: 10px;*/
+    /*margin-bottom: 15px;*/
+    height: 200px;
+    width: 990px;
+    overflow: auto;
+}
+
+.mobileShow{
+    position: absolute;
+    left: 50px;
+    top: 0;
+}
+
+.mobileShow{
+    visibility: hidden;
+    display: none;
+}
+@media only screen
+and (max-device-width: 480px){
+    .mobileShow{
+        visibility:visible;
+        display: inline-block;}
+}
+
+
+.mobileHide{
+    visibility:visible;
+    display: inline-block;
+}
+@media only screen
+and (max-device-width: 480px){
+    .mobileHide{
+        visibility: hidden;
+        display: none;
+    }
+}
+
+
+#flightsAPI{
+    height: 400px;
+    margin-top: 80px;
+    padding-top: 30px;
+    background: rgba(255,255,255,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+#flightsAPI h3{
+    padding-left: 3px;
+}
+
+#contactDiv{
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#footer p{
+    color: #f1f1f1;
+}
+
+a{
+    color: midnightblue;
+    text-decoration: underline;
+}

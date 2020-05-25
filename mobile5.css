@@ -1,0 +1,30 @@
+body,
+#navbar{
+    width: 100%;
+}
+.container{
+    flex-direction: column;
+}
+
+#box{
+    height: 520px;
+}
+#flightsAPI{
+    height: 450px;
+}
+.carousel-inner p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#e2, #k2, #n2, #sa2, #t2{
+    width: 100%;
+}
+#e1, #k1, #n1, #sa1, #t1{
+    width: 100%;
+}
+#cityDropdown1{
+    margin-top: 40px;
+}
+#box1, #box2{
+    width: 100%;
+}
