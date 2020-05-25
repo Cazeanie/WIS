@@ -134,7 +134,6 @@ var buflayerGroup = L.markerClusterGroup({
         for (var i = 0; i<markers.length; i++) {
             n += markers[i];
         }
-        console.log(markers);
         return L.divIcon({html: markers, className: 'bufcluster', iconSize: L.point(20,20)});
     }
 }).addTo(mymap);
@@ -181,7 +180,6 @@ var elelayerGroup = L.featureGroup.subGroup(parentGroup, ({
         for (var i = 0; i<markers.length; i++) {
             n += markers[i];
         }
-        console.log(markers);
         return L.divIcon({html: markers, className: 'elecluster', iconSize: L.point(20,20)});
     }
 })).addTo(mymap);
@@ -234,7 +232,6 @@ var flamlayerGroup = L.markerClusterGroup({
         for (var i = 0; i<markers.length; i++) {
             n += markers[i];
         }
-        console.log(markers);
         return L.divIcon({html: markers, className: 'flamcluster', iconSize: L.point(20,20)});
     }
 }).addTo(mymap);
@@ -286,7 +283,6 @@ var bablayerGroup = L.markerClusterGroup({
         for (var i = 0; i<markers.length; i++) {
             n += markers[i];
         }
-        console.log(markers);
         return L.divIcon({html: markers, className: 'babcluster', iconSize: L.point(20,20)});
     }
 }).addTo(mymap);
@@ -339,7 +335,6 @@ var jacklayerGroup = L.featureGroup.subGroup(parentGroup,({
         for (var i = 0; i < markers.length; i++) {
             n += markers[i];
         }
-        console.log(markers);
         return L.divIcon({html: markers, className: 'jackcluster', iconSize: L.point(20, 20)});
     }
 })).addTo(mymap);
