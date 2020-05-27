@@ -1,0 +1,25 @@
+body,
+#navbar{
+    width: 100%;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.carousel-inner p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#e1, #k1, #n1, #sa1, #t1{
+    width: 100%;
+}
+
+#e2, #k2, #n2, #sa2, #t2{
+    width: 100%;
+}
+
+#flightsAPI{
+    height: 450px;
+}

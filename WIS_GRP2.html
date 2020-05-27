@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WIS Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <!-- Google font CSS: Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="WIS_GRP2.css">
+    <link rel="stylesheet" href="WIS_GRP2_mobile.css" media="screen and (max-width:480px)">
+</head>
+<body>
+<!------------------------------------------------- The navigation bar ------------------------------------------------>
+<nav class="navbar navbar-expand-sm navbar-light hidden-xs" id="navbar">
+    <ul class="col-sm-9 navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#homeDiv">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#animalDiv">ANIMALS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mapDiv">MAP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#functionDiv">TOURS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contactDiv">CONTACT</a></li>
+    </ul>
+    <div class="col-sm-3" id="song">
+        <audio controls><source src="images/Hakuna_Matata.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</nav>
+<!-------------------------------------------------- The header part -------------------------------------------------->
+<div class="container text-center" id="homeDiv">
+    <h1>DISCOVER AFRICAN ANIMALS!</h1>
+    <h2><br>We provide unique insights for your African tours.<br>Discover where your favorite animal lives & begin planning your trip.<br><br> Start your adventure by picking an animal below!</h2>
+</div>
+
+<!----------------------------------------------- The clickable animals ----------------------------------------------->
+<div class="container text-center" id="animalDiv">
+    <div class="row">
+        <div class="col-sm-4">
+            <h4><strong>Lion</strong></h4><br>
+            <a><img src="images/lion.png" id="lion_button"></a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Elephant</strong></h4><br>
+            <a><img src="images/elephant.png" id="elephant_button"></a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Cape Buffalo</strong></h4><br>
+            <a><img src="images/cape_buffalo.png" id="cape_buffalo_button"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4><strong>Flamingo</strong></h4><br>
+            <a><img src="images/flamingo_.png" id="flamingo_button"></a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Jackal</strong></h4><br>
+            <a><img src="images/jackals.png" id="jackal_button"></a>
+        </div>
+        <div class="col-sm-4">
+            <h4><strong>Baboon</strong></h4><br>
+            <a><img src="images/baboon_.png" id="baboon_button"></a>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------- The map and the travel infos -------------------------------------------->
+
+<!------------------------------------------------------ The map ------------------------------------------------------>
+<div class="container" id="mapDiv">
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="mapid">
+                <p> Africa Map.</p>
+            </div>
+        </div>
+        <div class="col-sm-4" id="intro">
+            <div id="introCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#introCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#introCarousel" data-slide-to="1"></li>
+                    <li data-target="#introCarousel" data-slide-to="2"></li>
+                    <li data-target="#introCarousel" data-slide-to="3"></li>
+                    <li data-target="#introCarousel" data-slide-to="4"></li>
+                    <li data-target="#introCarousel" data-slide-to="5"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h4>Lions</h4>
+                        <p>African lions have been admired throughout history as symbols of courage and strength. These iconic animals have powerful bodies — in the cat family, they’re second in size only to tigers — and roars that can be heard from five miles away. An adult lion’s coat is yellow-gold, and juveniles have some light spots that disappear with age. Only male lions typically boast manes.<br>
+                            <br>African lions once roamed most of Africa and parts of Asia and Europe. But the species has disappeared from 94 percent of its historic range and can only be found today in parts of sub-Saharan Africa.</p>
+                        <p><a href="https://www.nationalgeographic.com/animals/mammals/a/african-lion/" target="_blank">© National Geographic</a></p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h4>Elephants</h4>
+                        <p>African elephants range throughout the savannas of sub-Saharan Africa and the rainforests of central and West Africa. The continent’s northernmost elephants are found in Sahel area of Mali. The small, nomadic herd of Mali elephants migrates in a circular route through the desert in search of water.<br>
+                            <br>Because elephants eat so much, they’re increasingly coming into contact with humans. An elephant can destroy an entire season of crops in a single night — a huge blow to a farmer, who may want to retaliate. Elephants are so smart that they can learn to get around electric fences quickly!</p>
+                        <p><a href="https://www.nationalgeographic.com/animals/mammals/a/african-elephant/" target="_blank">© National Geographic</a></p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h4>Cape Buffalo</h4>
+                        <p>A pest to ranchers, a prize to hunters, and a temperamental tank to anything that bothers it, African buffalo roam by the thousands in sub-Saharan Africa.<br>
+                            <br>Cape buffalo, one of four distinct subspecies of the African buffalo, are the most common. They’re distinguished by coloring, size, and even horn shape.<br>
+                            <br>When the buffalo aren’t fighting off the occasional lion, they’re eating grass—and lots of it. It forms the bulk of their diet. Like cows, buffalo chew cud to further extract nutrients.</p>
+                        <p><a href="https://www.nationalgeographic.com/animals/mammals/a/african-buffalo/" target="_blank">© National Geographic</a></p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h4>Flamingos</h4>
+                        <p>These famous pink birds can be found in warm, watery regions on many continents. They favor environments like estuaries and saline or alkaline lakes. Considering their appearance, flamingos are surprisingly fluid swimmers, but really thrive on the extensive mud flats where they breed and feed.<br>
+                            <br>Greater flamingos are likely to be the only tall, pink bird in any given locale. They also have long, lean, curved necks and black-tipped bills with a distinctive downward bend.<br>
+                            <br><p><a href="https://www.nationalgeographic.com/animals/birds/g/greater-flamingo/"  target="_blank">© National Geographic</a></p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h4>Jackals</h4>
+                        <p>Jackals are medium-sized omnivorous mammals of the genus Canis, a genus which also includes wolves and the domestic dog. While the word "jackal" has historically been used for many small canids, in modern use it most commonly refers to three species: the closely related black-backed jackal and side-striped jackal of sub-Saharan Africa, and the golden jackal of south-central Eurasia, which is more closely related to other members of the genus Canis.<br>
+                            <br>Jackals are opportunistic omnivores, predators of small to medium-sized animals and proficient scavengers.</p>
+                        <p><a href="https://en.wikipedia.org/wiki/Jackal" target="_blank">© Wikipedia</a></p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h4>Baboons</h4>
+                        <p>There are five different species of baboons. All of them live in Africa or Arabia. Baboons are some of the world's largest monkeys, and males of different species average from 33 to 82 pounds. Baboon bodies are 20 to 40 inches long, not including substantial tails of varying lengths.<br>
+                            <br>Baboons generally prefer savanna and other semi-arid habitats, though a few live in tropical forests.<br>
+                            <br>Like other Old World monkeys, baboons do not have prehensile (gripping) tails. But they can and do climb trees to sleep, eat, or look out for trouble. They spend much of their time on the ground.</p>
+                        <p><a href="https://www.nationalgeographic.com/animals/mammals/group/baboons/" target="_blank">© National Geographic</a></p>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------- The travel infos -------------------------------------------------->
+<div class="container" id="functionDiv">
+    <h3>Get travel info here! Find a travel agency and discover the weather:</h3>
+    <div class="row" id="menu">
+        <div class="col-sm-6 d-flex justify-content-center" id="menuMain">
+            <select id="cityDropdown1">
+                <option value="start">Choose your destination!</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="kenya">Kenya</option>
+                <option value="namibia">Namibia</option>
+                <option value="southAfrica">South Africa</option>
+                <option value="tanzania">Tanzania</option>
+            </select>
+        </div>
+        <div class="col-sm-6 d-flex justify-content-center" id="menuSub">
+            <select id="cityDropdown2">
+                <option value="">Get your travel infos here!</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container" id="functionContent">
+        <div class="col-sm-12" id="content">
+<!----------------------------------------------------- Ethiopia ------------------------------------------------------>
+            <div id="e1" class="functions">
+                <div class="d-flex justify-content-center mobileHide" id="weatherEthiopiaPC"></div>
+                <div class="d-flex justify-content-center mobileShow" id="weatherEthiopiaMobile"></div>
+            </div>
+            <div id="e2" class="functions">
+                <ul><table class="table table-hover">
+                    <thead><tr><th>Agency</th><th>About</th></tr></thead>
+                    <tbody>
+                    <tr><td><a href="https://www.meetmule.com" target="_blank">Merit Ethiopian Experience Tours</a></td>
+                        <td>Merit Ethiopian Experience Tours (MEET) is local tour operator in Ethiopia established to deliver high quality & professional tour and travel services mainly in Ethiopia. MEET is owned and run by experienced tourism professionals. MEET strives to provide the best tour experiences possible visitors deserve in Ethiopia.</td>
+                    </tr>
+                    <tr><td><a href="https://www.diltour.com" target="_blank">Dil Tour & Travel</a></td>
+                        <td>We believe that it’s the small things that make the difference between a good day out and a perfect one. That’s why Dil Tours offers a completely customized, bespoke tour across Ethiopia and Addis Ababa that triggers the “small things” effect within you. It’s probable that the more experienced traveler you are, the harder you are to please or interest, and that’s all the more reason for us to going bespoke and getting exactly what interests you, without compromise.</td>
+                    </tr>
+                    <tr><td><a href="http://www.ethiotargettravelandtours.com" target="_blank">Ethio Target Tours and Travel</a></td>
+                        <td>Ethio Target Tours and Travel provides holiday tours and travel agency related services in Ethiopia. We specialize in providing customized Ethiopian Holiday tours for groups and independent travelers with destinations throughout Ethiopia. Established in 2008, we are organizing best custom tour packages with excellent guides and a unique selection of activities, experiences, and adventure tours.</td>
+                    </tr>
+                    <tr><td><a href="https://www.easterntravelandtour.com" target="_blank">Easten Travel and Tours</a></td>
+                        <td>Looking for inspiration? Let us help you find the perfect place. Ideal destinations for a weekend break or honeymoon!</td>
+                    </tr>
+                    <tr><td><a href="https://www.yamarelandtours.com" target="_blank"> Yamare Land Tours</a></td>
+                        <td>We are committed to offering travel services of the highest quality, combining our energy and enthusiasm, with our years of experience. Our greatest satisfaction comes in serving large numbers of satisfied clients who have experienced the joys and inspiration of tour. Ever since our tour agency was established, Yamare Land Tours has concentrated its efforts in producing quality tour, responding to the needs of the times while anticipating the demands of the future.</td>
+                    </tr>
+                    </tbody></table></ul>
+            </div>
+<!------------------------------------------------------ Kenya -------------------------------------------------------->
+            <div id="k1" class="functions">
+                <div class="d-flex justify-content-center mobileHide" id="weatherKenyaPC"></div>
+                <div class="d-flex justify-content-center mobileShow" id="weatherKenyaMobile"></div>
+            </div>
+            <div id="k2" class="functions">
+                <ul><table class="table table-hover">
+                    <thead><tr><th>Agency</th><th>About</th></tr></thead>
+                    <tbody>
+                    <tr><td><a href="https://www.africahomeadventure.com" target="_blank"> African Home Adventure Safaris</a></td>
+                        <td>African Home Adventure Safaris is one of the local reliable and affordable inbound Kenya and Tanzania tour operators, dedicated to provide unique and comprehensive selection of Tours - Safaris - Mount Kilimanjaro climbing tours - Mount Kenya trekking tours - Beach Holidays and all travel services tailored to the specific needs of luxury and budget adventure tourists. With daily tour departures and safari expeditions, the company has a proven record of outstanding service, both at point-of-sale and in “after sales” care.</td>
+                    </tr>
+                    <tr><td><a href="http://www.kenyasafari.com" target="_blank">Kenya Safaris</a></td>
+                        <td>When people think of safari in Africa, a Kenya safari is the one that comes to mind. From the stampeding herds of the Mara to the cultures of the Maasai, Rendille and Samburu, and the Pink Flamingos of the Rift Valley Lakes against the backdrop of the majestic Mount Kenya. This is the original "Out of Africa" safari destination.</td>
+                    </tr>
+                    <tr><td><a href="https://farhiya-kenya-tour-agency.business.site/?m=true" target="_blank">Farhiya Kenya Tour Agency</a></td>
+                        <td>Visit Prestigious Parks and game reserves through us, camp and enjoy the African cuisine with African dances and entertainment just for you as our client.</td>
+                    </tr>
+                    <tr><td><a href="https://mufasatoursandtravelskenya.com" target="_blank">Mufasa Tour and Travel</a></td>
+                        <td>Mufasa Tours and Travels is one of the best and leading travel agencies in Kenya.  We have a team that provides unique and custom tour packages in Kenya. Come to us for hotel bookings, safaris for mid-range and luxury packages, beach vacation packages along the coast, city day tours, day expeditions and car rental services for tour vehicles.</td>
+                    </tr>
+                    <tr><td><a href="http://trekbeyondadventures.com" target="_blank">Trek Beyond Adventures</a></td>
+                        <td>Make your excursions adventurous, awesome, fun and stress-free with your own tailor-made tours. Tell us where you would like to go, what you would like to do and we will customize a package which will exactly match according to your preferences.</td>
+                    </tr>
+                    </tbody></table></ul>
+            </div>
+<!----------------------------------------------------- Namibia ------------------------------------------------------->
+            <div id="n1" class="functions">
+                <div class="d-flex justify-content-center mobileHide" id="weatherNamibiaPC"></div>
+                <div class="d-flex justify-content-center mobileShow" id="weatherNamibiaMobile"></div>
+            </div>
+            <div id="n2" class="functions">
+                <ul><table class="table table-hover">
+                    <thead><tr><th>Agency</th><th>About</th></tr></thead>
+                    <tbody>
+                    <tr><td><a href="https://safariworldtours.com" target="_blank">Safari World Tours</a></td>
+                        <td>We offer you the best 8 destination countries in Africa to choose from. Our aim is to provide quality safaris in wildlife, landscape, culture and tribe. Our tours are family friendly, although some trekking tours require guests to be physically fit.</td>
+                    </tr>
+                    <tr><td><a href="https://www.leyariciotoursafaris.com/444484572" target="_blank">Leyaricio Tour & Safari</a></td>
+                        <td>Leyaricio Tours & Safari Is a Namibian based tour & Safari company,  with several years of experience in the tourism industry. We work as a group or individually as required for a given project.
+                            We use modern facilities to enhance our work and give you the absolute best results.</td>
+                    </tr>
+                    <tr><td><a href="https://www.acacianamibia.com" target="_blank">Acacia Namibia</a></td>
+                        <td>Acacia Namibia offers a complete quoting and reservation service for all travel requirements, special interest fields, self-drive or guided safaris, adventure and activity holidays, fly-in safaris, horse- and hiking trails, reservations for hotels, guest farms, lodges, car hires (also with camping equipment), city tours, etc. Each program is tailor made and personalized. All travel requests are based on individual interests and budgets. Every guest will be presented with comprehensive tour documentation at their point of arrival.</td>
+                    </tr>
+                    <tr><td><a href="https://explore-namibia.com/about-us/" target="_blank">Explore Namibia</a></td>
+                        <td>Explore Namibia is a dynamic and professional company in Namibia, founded in 2006 by the Dutch couple, Marco and Elise. Both have travelled through Africa extensively and they simply love it. When the opportunity occurred to go on an adventure to Africa, they did not hesitate, quit their jobs in Europe and moved 10.000 km South. And still today, after all these years they still love what they do – Explore Namibia and help others do the same!</td>
+                    </tr>
+                    <tr><td><a href="https://motema-safaris.com" target="_blank">Motema Tours and Safaris</a></td>
+                        <td>We are a passionate team with the vision of delivering the best & most exciting experience for our customers. First of all, MOTEMA means Heart in Linguala Language. So we welcome everyone with our Heart in our World. MOTEMA is where the wonders of your journey will begin, along with a devoted team that we consider family. Motema Tours and Safari is a Tour Operator company, offering Airport transfers Services, Meet & Greet Services, Tour Guides, Chauffeur Services, Express Transfers, Guided Safaris and so much more. Motema Tours and Safari is committed to be a truly professional service provider adhering to global standards.</td>
+                    </tr>
+                    </tbody></table></ul>
+            </div>
+<!--------------------------------------------------- South Africa ---------------------------------------------------->
+            <div id="sa1" class="functions">
+                <div class="d-flex justify-content-center mobileHide" id="weatherSouthAfricaPC"></div>
+                <div class="d-flex justify-content-center mobileShow" id="weatherSouthAfricaMobile"></div>
+            </div>
+            <div id="sa2" class="functions">
+                <ul><table class="table table-hover">
+                    <thead>
+                    <tr><th>Agency</th><th>About</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td><a href="https://www.vivasafaris.com/" target="_blank">Viva Safaris</a></td>
+                        <td>Viva Safaris was established in 1991 by people that love wildlife. Family-owned and wholly South African, our aim has always been to enthusiastically share that love and passion with the thousands of satisfied tourists that have been through our hands. We do not aim for exclusivity – we have made our Kruger Park safari packages accessible to a wide range of pockets.</td>
+                    </tr>
+                    <tr><td><a href="https://www.exodus.co.uk/south-africa-holidays" target="_blank">Exodus Travels</a></td>
+                        <td>It is all about adventure. That is what Exodus was founded upon and what the company is still all about. Discovering countries, cultures, environments, cities, mountain ranges, deserts, coasts and jungles; exploring this amazing planet we all live on.</td>
+                    </tr>
+                    <tr><td><a href="https://www.springbokatlas.com/" target="_blank">Springbok Atlas Tours and Safaris</a></td>
+                        <td>Springbok Atlas Tours & Safaris is one of Southern Africa’s leading tour operators, providing an extensive range of innovative, authentic and competitively priced travel experiences. We take pride in providing quality Guided Holidays, Day Tours and limitless Tailor-made Travel options for group and FIT travel.</td>
+                    </tr>
+                    <tr><td><a href="https://abangafrica.com/" target="_blank">Abang Africa Travel</a></td>
+                        <td>Abang Africa Travel is a specialized sustainable tourism company, based in Cape Town and operating in the whole of South Africa, Swaziland, Lesotho, Namibia, Botswana, Victoria Falls and Mozambique.</td>
+                    </tr>
+                    <tr><td><a href="https://www.capetowndaytours.co.za/" target="_blank">Cape Town Day Tours</a></td>
+                        <td>Cape Town Day Tours aim is to provide a personalised service, striving for excellence on every aspect of your holiday. Let us take away the stress and help you plan a holiday covering all the majestic wonders Cape Town has to offer.</td>
+                    </tr>
+                    </tbody>
+                </table></ul>
+            </div>
+<!----------------------------------------------------- Tanzania ------------------------------------------------------>
+            <div id="t1" class="functions">
+                <div class="d-flex justify-content-center mobileHide" id="weatherTanzaniaPC"></div>
+                <div class="d-flex justify-content-center mobileShow" id="weatherTanzaniaMobile"></div>
+            </div>
+            <div id="t2" class="functions">
+                <ul><table class="table table-hover">
+                    <thead><tr><th>Agency</th><th>About</th></tr></thead>
+                    <tbody>
+                    <tr><td><a href="https://enosaexpeditions.com/" target="_blank">Enosa Expeditions</a></td>
+                        <td>Our company gives you an opportunity to see the beauty of Tanzania. If you are looking for a company to arrange your lodge and camping safaris, trekking and hiking tours and beach holidays you have come to the right place.</td>
+                    </tr>
+                    <tr><td><a href="https://simbaadventures.com/" target="_blank">Simba Adventures</a></td>
+                        <td>Since its founding, Simba Adventures has always been a leading specialist in tailor-made safari and trekking holidays in East Africa.</td>
+                    </tr>
+                    <tr><td><a href="https://www.sayaritanotours.com/" target="_blank">Sayari Tano Tours</a></td>
+                        <td>We are fully registered company owned and managed by wildlife and travel enthusiasts. We are proud to have a reputation as reliable and professional Tanzania & East Africa tour specialists, well equipped to handle all your holiday packages, safari vacations and travel requirements throughout East Africa.</td>
+                    </tr>
+                    <tr><td><a href="https://www.kanuthadventures.com/" target="_blank">Kanuth Adventure Safaris</a></td>
+                        <td>At Kanuth Adventure Safaris we are committed to giving you a customized and unforgettable wildlife adventure experience.</td>
+                    </tr>
+                    <tr><td><a href="http://dahliatours.com/" target="_blank">Dahlia Africa</a></td>
+                        <td>Dahlia Africa, formally known as Dahlia Tours and Safaris is a licensed, fast growing Safari and tour operator company located in Arusha, Tanzania since 2010. We are an inbound local small operator; we intentionally remain small and selling boutique tours so we can employ the very best guides and team in the industry.</td>
+                    </tr>
+                    </tbody></table></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------------- Search flights -------------------------------------------------->
+<div class="container" id="flightsAPI">
+    <h3>Ready to go? Find your flights here!</h3>
+    <div data-skyscanner-widget="SearchWidget"></div>
+</div>
+<!---------------------------------------------------- The contact ---------------------------------------------------->
+<div class="container-fluid" id="contactDiv">
+    <script type="text/javascript"
+            defer src="//www.123formbuilder.com/embed/5391083.js"
+            data-role="form"
+            data-default-width="650px"></script>
+</div>
+<!------------------------------------------------------ JS links ----------------------------------------------------->
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+<!-- Open weather map JS -->
+<script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+<!-- Skyscanner JS -->
+<script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<!-- Local JS -->
+<script src="WIS_GRP2.js" type="text/javascript"></script>
+<script src="baboons.js" type="text/javascript"></script>
+<script src="elephants.js" type="text/javascript"></script>
+<script src="flamingos.js" type="text/javascript"></script>
+<script src="jackals.js" type="text/javascript"></script>
+<!------------------------------------------------------- Footer ------------------------------------------------------>
+<footer class="text-center" id="footer">
+    <p><strong>Web Information System 2020 @ KU Leuven © Allison Bearly, Fengan Li, Wen Chi Han</strong></p>
+</footer>
+</body>
+</html>
