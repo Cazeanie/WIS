@@ -86,7 +86,7 @@ body {
     height: 40px;
     background-color: gray;
     text-align: center;
-    font-size: 24px;
+    font-size: 12px;
     color: white;
 }
 
@@ -96,7 +96,7 @@ body {
     background-color: cadetblue;
     text-align: center;
     horiz-align: center;
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .lioncluster{
@@ -105,7 +105,7 @@ body {
     background-color: orange;
     text-align: center;
     horiz-align: center;
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .flamcluster{
@@ -114,7 +114,7 @@ body {
     background-color: hotpink;
     text-align: center;
     horiz-align: center;
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .babcluster{
@@ -123,7 +123,7 @@ body {
     background-color: darkred;
     text-align: center;
     horiz-align: center;
-    font-size: 24px;
+    font-size: 12px;
     color: white;
 }
 
@@ -133,7 +133,7 @@ body {
     background-color: saddlebrown;
     text-align: center;
     horiz-align: center;
-    font-size: 24px;
+    font-size: 12px;
     color: white;
 }
 
