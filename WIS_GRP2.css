@@ -86,7 +86,7 @@ body {
     height: 40px;
     background-color: gray;
     text-align: center;
-    font-size: 24;
+    font-size: 24px;
     color: white;
 }
 
@@ -96,7 +96,7 @@ body {
     background-color: cadetblue;
     text-align: center;
     horiz-align: center;
-    font-size: 24;
+    font-size: 24px;
 }
 
 .lioncluster{
@@ -105,7 +105,7 @@ body {
     background-color: orange;
     text-align: center;
     horiz-align: center;
-    font-size: 24;
+    font-size: 24px;
 }
 
 .flamcluster{
@@ -114,7 +114,7 @@ body {
     background-color: hotpink;
     text-align: center;
     horiz-align: center;
-    font-size: 24;
+    font-size: 24px;
 }
 
 .babcluster{
@@ -123,7 +123,7 @@ body {
     background-color: darkred;
     text-align: center;
     horiz-align: center;
-    font-size: 24;
+    font-size: 24px;
     color: white;
 }
 
@@ -133,7 +133,7 @@ body {
     background-color: saddlebrown;
     text-align: center;
     horiz-align: center;
-    font-size: 24;
+    font-size: 24px;
     color: white;
 }
 
@@ -219,13 +219,16 @@ body {
 #e1, #k1, #n1, #sa1, #t1 {
     height: 200px;
     width: 990px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #e2, #k2, #n2, #sa2, #t2{
-    height: 200px;
+    height: 400px;
     width: 990px;
-    overflow: auto;
     background: rgba(255,255,255,.4);
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .mobileShow{
@@ -238,26 +241,26 @@ body {
     visibility: hidden;
     display: none;
 }
+
+.mobileHide{
+    visibility: visible;
+    display: inline-block;
+}
+
 @media only screen
 and (max-device-width: 480px){
+    #e2, #k2, #n2, #sa2, #t2{
+        background: rgba(255,255,255,.4);
+        overflow-y: scroll; /* It isn't working */
+    }
     .mobileShow{
         visibility:visible;
         display: inline-block;}
-}
-
-
-.mobileHide{
-    visibility:visible;
-    display: inline-block;
-}
-@media only screen
-and (max-device-width: 480px){
     .mobileHide{
         visibility: hidden;
         display: none;
     }
 }
-
 
 #flightsAPI{
     height: 400px;
